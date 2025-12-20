@@ -6,19 +6,21 @@ The Learning Intelligence AI Tool is a practical, executable AI system built to 
 
 The tool predicts course completion outcomes, flags students at risk of dropping out, and identifies challenging course chapters based on engagement and performance metrics. It is designed to demonstrate real-world AI engineering practices, including offline model training, structured pipelines, and API-based inference.
 
+
 ## 2. What the AI Tool Does
    The system provides the following capabilities:
-      ### 1. Course Completion Prediction
+      #### 1. Course Completion Prediction
               Predicts whether a student will complete a course (binary classification).
-      ### 2. Early Risk Detection
+      #### 2. Early Risk Detection
               Identifies students likely to drop out early based on behavior and performance.
-      ### 3. Chapter Difficulty Detection
+      #### 3. Chapter Difficulty Detection
               Detects difficult chapters using engagement time, assessment scores, and dropout rates.
-      ### 4. Insight Generation
+      #### 4. Insight Generation
               Produces structured insights and optional human-readable summaries for mentors and administrators.
 
+
 ## 3. System Architecture
-   ### The tool follows a production-style AI pipeline:
+   #### The tool follows a production-style AI pipeline:
 
                 CSV Upload
                     ↓
@@ -36,11 +38,12 @@ The tool predicts course completion outcomes, flags students at risk of dropping
                     ↓
       Gemini-based Human-readable Summary
 
-   ### Model training is performed offline
-   ### Prediction and analysis are executed inside the running tool
+   Model training is performed offline
+   Prediction and analysis are executed inside the running tool
+
 
 ## 4. AI Models and Feature Choices
-   ### Machine Learning Model
+   #### Machine Learning Model
    
    1. Problem Type: Binary Classification (Course Completion)
 
@@ -54,9 +57,10 @@ The tool predicts course completion outcomes, flags students at risk of dropping
    4. Model Persistence:
       The trained model is saved and loaded using joblib.
 
+
 ## 5. Feature Engineering
 
-   ### Student-level features engineered from raw learner data:
+   #### Student-level features engineered from raw learner data:
    1. Average assessment score
 
    2. Average time spent per chapter
@@ -65,9 +69,10 @@ The tool predicts course completion outcomes, flags students at risk of dropping
 
    These features were selected to capture learner engagement and performance patterns.
 
+
 ## 6. Chapter Difficulty Detection
 
-   ### Chapter difficulty is identified using rule-based analytics to ensure transparency and explainability.
+   #### Chapter difficulty is identified using rule-based analytics to ensure transparency and explainability.
 
    Metrics used:
 
@@ -77,7 +82,7 @@ The tool predicts course completion outcomes, flags students at risk of dropping
 
    3. Average assessment score
 
-   ### A normalized difficulty index is computed to classify chapters as:
+   #### A normalized difficulty index is computed to classify chapters as:
 
    1. LOW
 
@@ -87,9 +92,10 @@ The tool predicts course completion outcomes, flags students at risk of dropping
 
 This approach avoids unnecessary machine learning and keeps the logic interpretable.
 
+
 ## 7. Input Format
 
-   ### The tool accepts learner data in CSV format with the following required columns:
+   #### The tool accepts learner data in CSV format with the following required columns:
 
    1. student_id
 
@@ -103,9 +109,10 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
 
    6. completed
 
+
 ## 8. Output Format
 
-   ### The API returns a JSON response containing:
+   #### The API returns a JSON response containing:
 
    Student-level completion predictions
 
@@ -116,6 +123,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    Structured insights
 
    Optional human-readable summary for mentors and admins
+
 
 ## 9. How to Run the Tool Locally
    
@@ -167,50 +175,50 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
       Optional human-readable summary
 
 
+## 10. AI Usage Disclosure (Mandatory)
+  
+   ### What AI Assistance Was Used
 
-AI Usage Disclosure (Mandatory)
-What AI Assistance Was Used
+   ChatGPT was used during development for:
 
-ChatGPT was used during development for:
+   1. Concept clarification
 
-Concept clarification
+   2. Architectural guidance
 
-Architectural guidance
+   3. Documentation refinement
 
-Documentation refinement
+   4. Gemini API is used inside the tool only to generate human-readable summaries from structured insights.
+      
 
-Gemini API is used inside the tool only to generate human-readable summaries from structured insights.
+## 11. What Logic Was Written Independently
 
-What Logic Was Written Independently
+   1. Machine learning model training and inference
 
-Machine learning model training and inference
+   2. Feature engineering
 
-Feature engineering
+   3. Early risk detection logic
 
-Early risk detection logic
+   4. Chapter difficulty analysis
 
-Chapter difficulty analysis
+   5. API implementation and system architecture
 
-API implementation and system architecture
+   6. Data preprocessing and validation
 
-Data preprocessing and validation
 
-How Outputs Were Verified
+## 12. How Outputs Were Verified
 
-Model predictions were validated using train-test splits and accuracy metrics.
+   1. Model predictions were validated using train-test splits and accuracy metrics.
 
-Chapter difficulty analysis was verified using computed engagement and performance statistics.
+   2. Chapter difficulty analysis was verified using computed engagement and performance statistics.
 
-Gemini output is constrained by a strict system instruction and only summarizes system-generated results.
+   3. Gemini output is constrained by a strict system instruction and only summarizes system-generated results.
 
-Gemini does not perform predictions, analysis, or decision-making.
+   4. Gemini does not perform predictions, analysis, or decision-making.
 
-Responsible AI Statement
 
-Generative AI is used strictly as an explainability layer.
-All analytical decisions are deterministic, reproducible, and handled by the system’s own logic.
+## Responsible AI Statement
 
-Compliance Statement
+### Generative AI is used strictly as an explainability layer.
+### All analytical decisions are deterministic, reproducible, and handled by the system’s own logic.
 
-This project is a fully executable AI tool, not a notebook-based experiment.
-It adheres to all assessment requirements regarding transparency, reproducibility, and responsible AI usage.
+
