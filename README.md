@@ -196,8 +196,8 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    ### Sample Output
    After uploading the CSV file to the `/upload-csv` endpoint, the API returns a JSON response similar to the following:
 
-      ```json
-      {
+   ```json
+       {
         "message": "Learning intelligence analysis completed successfully",
 
         "student_predictions": [
