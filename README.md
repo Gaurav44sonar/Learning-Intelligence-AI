@@ -18,8 +18,7 @@ The tool predicts course completion outcomes, flags students at risk of dropping
               Produces structured insights and optional human-readable summaries for mentors and administrators.
 
 ## 3. System Architecture
-
-    The tool follows a production-style AI pipeline:
+   ### The tool follows a production-style AI pipeline:
 
                 CSV Upload
                     ↓
@@ -37,9 +36,8 @@ The tool predicts course completion outcomes, flags students at risk of dropping
                     ↓
       Gemini-based Human-readable Summary
 
-
-    ### Model training is performed offline
-    ### Prediction and analysis are executed inside the running tool
+   ### Model training is performed offline
+   ### Prediction and analysis are executed inside the running tool
 
 ## 4. AI Models and Feature Choices
       ### Machine Learning Model
