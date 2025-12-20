@@ -133,7 +133,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    
    1. Clone the Repository
       ```bash
-      git clone <your-github-repo-url>
+      git clone https://github.com/Gaurav44sonar/Learning-Intelligence-AI.git
       cd Learning-Intelligence-AI
       
    2. Create and Activate a Virtual Environment
