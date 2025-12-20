@@ -1,6 +1,6 @@
 # Learning-Intelligence-AI
 
-Overview
+## Overview
 
 The Learning Intelligence AI Tool is a practical, executable AI system built to analyze learner data from internship or training programs. It processes learner interaction records and produces predictions and analytics that help mentors and administrators monitor student progress and engagement.
 
