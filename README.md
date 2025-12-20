@@ -13,14 +13,14 @@ The tool predicts course completion outcomes, flags students at risk of dropping
    ### 1. Course Completion Prediction
    Predicts whether a student will complete a course (binary classification).
              
-      ### 2. Early Risk Detection
-             Identifies students likely to drop out early based on behavior and performance.
+   ### 2. Early Risk Detection
+   Identifies students likely to drop out early based on behavior and performance.
              
-      ### 3. Chapter Difficulty Detection
-             Detects difficult chapters using engagement time, assessment scores, and dropout rates.
+   ### 3. Chapter Difficulty Detection
+   Detects difficult chapters using engagement time, assessment scores, and dropout rates.
              
-      ### 4. Insight Generation
-             Produces structured insights and optional human-readable summaries for mentors and administrators.
+   ### 4. Insight Generation
+   Produces structured insights and optional human-readable summaries for mentors and administrators.
 
 
 ## 3. System Architecture
