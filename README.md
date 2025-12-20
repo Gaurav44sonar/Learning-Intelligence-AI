@@ -220,13 +220,6 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    4. Gemini does not perform predictions, analysis, or decision-making.
 
 
-## 13. Synthetic Data Usage
-
-Since no real learner dataset was provided as part of the assessment, a synthetic dataset was created to simulate realistic learner behavior. The synthetic data follows logical patterns of engagement, assessment performance, chapter progression, and course completion outcomes.
-
-The purpose of this dataset is to demonstrate the complete AI pipeline, including preprocessing, feature engineering, model training, inference, and insight generation. The focus of this project is on AI system design and deployment rather than real-world model accuracy.
-
-
 ## Responsible AI Statement
 
 ### Generative AI is used strictly as an explainability layer.
