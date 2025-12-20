@@ -40,101 +40,104 @@ The tool predicts course completion outcomes, flags students at risk of dropping
    ### Prediction and analysis are executed inside the running tool
 
 ## 4. AI Models and Feature Choices
-      ### Machine Learning Model
-      Problem Type: Binary Classification (Course Completion)
+   ### Machine Learning Model
+   
+   1. Problem Type: Binary Classification (Course Completion)
 
-Algorithms Explored:
+   2. Algorithms Explored:
+      1. Logistic Regression
+      2. Random Forest
 
-Logistic Regression
+   3. Model Selection:
+      The final model is selected based on validation accuracy.
 
-Random Forest
+   4. Model Persistence:
+      The trained model is saved and loaded using joblib.
 
-Model Selection:
-The final model is selected based on validation accuracy.
+## 5. Feature Engineering
 
-Model Persistence:
-The trained model is saved and loaded using joblib.
+   ### Student-level features engineered from raw learner data:
+   1. Average assessment score
 
-Feature Engineering
+   2. Average time spent per chapter
 
-Student-level features engineered from raw learner data:
+   3. Number of chapters attempted
 
-Average assessment score
+   These features were selected to capture learner engagement and performance patterns.
 
-Average time spent per chapter
+## 6. Chapter Difficulty Detection
 
-Number of chapters attempted
+   ### Chapter difficulty is identified using rule-based analytics to ensure transparency and explainability.
 
-These features were selected to capture learner engagement and performance patterns.
+   Metrics used:
 
-Chapter Difficulty Detection
+   1. Dropout rate per chapter
 
-Chapter Difficulty Detection
+   2. Average time spent
 
-Chapter difficulty is identified using rule-based analytics to ensure transparency and explainability.
+   3. Average assessment score
 
-Metrics used:
+   ### A normalized difficulty index is computed to classify chapters as:
 
-Dropout rate per chapter
+   1. LOW
 
-Average time spent
+   2. MEDIUM
 
-Average assessment score
-
-A normalized difficulty index is computed to classify chapters as:
-
-LOW
-
-MEDIUM
-
-HIGH
+   3. HIGH
 
 This approach avoids unnecessary machine learning and keeps the logic interpretable.
 
-Input Format
+## 7. Input Format
 
-The tool accepts learner data in CSV format with the following required columns:
+   ### The tool accepts learner data in CSV format with the following required columns:
 
-student_id
+   1. student_id
 
-course_id
+   2. course_id
 
-chapter_order
+   3. chapter_order
 
-time_spent
+   4. time_spent
 
-score
+   5. score
 
-completed
+   6. completed
 
-Output Format
+## 8. Output Format
 
-The API returns a JSON response containing:
+   ### The API returns a JSON response containing:
 
-Student-level completion predictions
+   Student-level completion predictions
 
-High-risk student identification
+   High-risk student identification
 
-Chapter difficulty analysis
+   Chapter difficulty analysis
 
-Structured insights
+   Structured insights
 
-Optional human-readable summary for mentors and admins
+   Optional human-readable summary for mentors and admins
 
-How to Run the Tool Locally
-1. Create and activate a virtual environment
-python -m venv venv
-venv\Scripts\activate   # Windows
+## 9. How to Run the Tool Locally
+   
+   1. Clone the Repository
+      ```bash
+      git clone <your-github-repo-url>
+      cd Learning-Intelligence-AI
+      
+   2. Create and Activate a Virtual Environment
+      ### Windows
+      ```bash
+      python -m venv venv
+      venv\Scripts\activate
 
-2. Install dependencies
-pip install -r requirements.txt
+   ### Linux / macOS
+      ```bash
+      python3 -m venv venv
+      source venv/bin/activate
 
-3. Run the FastAPI server
-uvicorn app.main:app --reload
+   4. 
 
-4. Use the API
 
-Upload a CSV file using the /upload-csv endpoint to receive predictions and insights.
 
 AI Usage Disclosure (Mandatory)
 What AI Assistance Was Used
