@@ -1,56 +1,49 @@
 # Learning-Intelligence-AI
 
-## Overview
+## 1. Overview
 
 The Learning Intelligence AI Tool is a practical, executable AI system built to analyze learner data from internship or training programs. It processes learner interaction records and produces predictions and analytics that help mentors and administrators monitor student progress and engagement.
 
 The tool predicts course completion outcomes, flags students at risk of dropping out, and identifies challenging course chapters based on engagement and performance metrics. It is designed to demonstrate real-world AI engineering practices, including offline model training, structured pipelines, and API-based inference.
 
-What the AI Tool Does
+## 2. What the AI Tool Does
+   The system provides the following capabilities:
+      ### 1. Course Completion Prediction
+              Predicts whether a student will complete a course (binary classification).
+      ### 2. Early Risk Detection
+              Identifies students likely to drop out early based on behavior and performance.
+      ### 3. Chapter Difficulty Detection
+              Detects difficult chapters using engagement time, assessment scores, and dropout rates.
+      ### 4. Insight Generation
+              Produces structured insights and optional human-readable summaries for mentors and administrators.
 
-The system provides the following capabilities:
+## 3. System Architecture
 
-Course Completion Prediction
-Predicts whether a student will complete a course (binary classification).
+    The tool follows a production-style AI pipeline:
 
-Early Risk Detection
-Identifies students likely to drop out early based on behavior and performance.
-
-Chapter Difficulty Detection
-Detects difficult chapters using engagement time, assessment scores, and dropout rates.
-
-Insight Generation
-Produces structured insights and optional human-readable summaries for mentors and administrators.
-
-AI System Architecture
-
-The tool follows a production-style AI pipeline:
-
-CSV Upload
-↓
-Data Ingestion
-↓
-Preprocessing
-↓
-Feature Engineering
-↓
-Machine Learning Model Inference
-↓
-Rule-based Chapter Difficulty Analysis
-↓
-Structured Insights
-↓
-Gemini-based Human-readable Summary
+                CSV Upload
+                    ↓
+              Data Ingestion
+                    ↓
+               Preprocessing
+                    ↓
+            Feature Engineering
+                    ↓
+      Machine Learning Model Inference
+                    ↓
+    Rule-based Chapter Difficulty Analysis
+                    ↓
+            Structured Insights
+                    ↓
+      Gemini-based Human-readable Summary
 
 
-Model training is performed offline
+    ### Model training is performed offline
+    ### Prediction and analysis are executed inside the running tool
 
-Prediction and analysis are executed inside the running tool
-
-AI Models and Feature Choices
-Machine Learning Model
-
-Problem Type: Binary Classification (Course Completion)
+## 4. AI Models and Feature Choices
+      ### Machine Learning Model
+      Problem Type: Binary Classification (Course Completion)
 
 Algorithms Explored:
 
