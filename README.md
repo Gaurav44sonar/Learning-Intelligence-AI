@@ -198,51 +198,51 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
 
       ```json
       {
-  "message": "Learning intelligence analysis completed successfully",
+        "message": "Learning intelligence analysis completed successfully",
 
-  "student_predictions": [
-    {
-      "student_id": 201,
-      "avg_score": 75.33,
-      "avg_time_spent": 42.33,
-      "chapters_attempted": 3,
-      "prediction": 1
-    },
-    {
-      "student_id": 202,
-      "avg_score": 39.0,
-      "avg_time_spent": 19.0,
-      "chapters_attempted": 2,
-      "prediction": 0
-    }
-  ],
+        "student_predictions": [
+       {
+         "student_id": 201,
+         "avg_score": 75.33,
+         "avg_time_spent": 42.33,
+         "chapters_attempted": 3,
+         "prediction": 1
+       },
+       {
+         "student_id": 202,
+         "avg_score": 39.0,
+         "avg_time_spent": 19.0,
+         "chapters_attempted": 2,
+         "prediction": 0
+       }
+     ],
 
-  "chapter_difficulty": [
-    {
-      "chapter_order": 1,
-      "difficulty_level": "MEDIUM"
-    },
-    {
-      "chapter_order": 2,
-      "difficulty_level": "MEDIUM"
-    },
-    {
-      "chapter_order": 3,
-      "difficulty_level": "LOW"
-    }
-  ],
+        "chapter_difficulty": [
+       {
+         "chapter_order": 1,
+         "difficulty_level": "MEDIUM"
+       },
+       {
+         "chapter_order": 2,
+         "difficulty_level": "MEDIUM"
+       },
+       {
+         "chapter_order": 3,
+         "difficulty_level": "LOW"
+       }
+     ],
 
-  "structured_insights": {
-    "total_students": 50,
-    "high_risk_students_count": 25,
-    "key_factors": [
-      "Low average assessment scores",
-      "Low engagement time across chapters"
-    ]
-  },
+     "structured_insights": {
+       "total_students": 50,
+       "high_risk_students_count": 25,
+       "key_factors": [
+         "Low average assessment scores",
+         "Low engagement time across chapters"
+       ]
+     },
 
-  "summary": "25 out of 50 students are identified as high-risk. Chapters 1 and 2 show medium difficulty with higher dropout rates, while Chapter 3 shows low difficulty and better engagement."
-}
+        "summary": "25 out of 50 students are identified as high-risk. Chapters 1 and 2 show medium difficulty with higher dropout rates, while Chapter 3 shows low difficulty and better engagement."
+      }
 
    
 
