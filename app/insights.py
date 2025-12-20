@@ -2,13 +2,7 @@ import pandas as pd
 
 
 def generate_insights(df: pd.DataFrame) -> dict:
-    """
-    Generate structured insights from model predictions.
-    These insights are later converted into natural language
-    summaries using Gemini.
-    """
 
-    # Identify high-risk students (predicted dropout)
     high_risk_students = df[df["prediction"] == 0]["student_id"].tolist()
 
     insights = {
