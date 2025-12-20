@@ -178,8 +178,75 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
 
       Optional human-readable summary
 
+## 10. Sample Input and Output
+   ### Sample Input
+   The tool accepts learner data in CSV format.  
+   Below is a sample input file (`data/sample_learners.csv`):
 
-## 10. AI Usage Disclosure (Mandatory)
+   student_id,course_id,chapter_order,time_spent,score,completed  
+   201,DS101,1,45,78,1  
+   201,DS101,2,42,75,1  
+   202,DS101,1,20,40,0  
+   202,DS101,2,18,38,0  
+   203,DS101,1,55,85,1  
+   203,DS101,2,52,82,1  
+   ---
+   ---
+
+   ### Sample Output
+   After uploading the CSV file to the `/upload-csv` endpoint, the API returns a JSON response similar to the following:
+
+      ```json
+      {
+  "message": "Learning intelligence analysis completed successfully",
+
+  "student_predictions": [
+    {
+      "student_id": 201,
+      "avg_score": 75.33,
+      "avg_time_spent": 42.33,
+      "chapters_attempted": 3,
+      "prediction": 1
+    },
+    {
+      "student_id": 202,
+      "avg_score": 39.0,
+      "avg_time_spent": 19.0,
+      "chapters_attempted": 2,
+      "prediction": 0
+    }
+  ],
+
+  "chapter_difficulty": [
+    {
+      "chapter_order": 1,
+      "difficulty_level": "MEDIUM"
+    },
+    {
+      "chapter_order": 2,
+      "difficulty_level": "MEDIUM"
+    },
+    {
+      "chapter_order": 3,
+      "difficulty_level": "LOW"
+    }
+  ],
+
+  "structured_insights": {
+    "total_students": 50,
+    "high_risk_students_count": 25,
+    "key_factors": [
+      "Low average assessment scores",
+      "Low engagement time across chapters"
+    ]
+  },
+
+  "summary": "25 out of 50 students are identified as high-risk. Chapters 1 and 2 show medium difficulty with higher dropout rates, while Chapter 3 shows low difficulty and better engagement."
+}
+
+   
+
+## 11. AI Usage Disclosure
   
    ### What AI Assistance Was Used
 
@@ -194,7 +261,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    4. Gemini API is used inside the tool only to generate human-readable summaries from structured insights.
       
 
-## 11. What Logic Was Written Independently
+## 12. What Logic Was Written Independently
 
    1. Machine learning model training and inference
 
@@ -209,7 +276,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
    6. Data preprocessing and validation
 
 
-## 12. How Outputs Were Verified
+## 13. How Outputs Were Verified
 
    1. Model predictions were validated using train-test splits and accuracy metrics.
 
