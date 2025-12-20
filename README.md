@@ -125,12 +125,12 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
       cd Learning-Intelligence-AI
       
    2. Create and Activate a Virtual Environment
-      ### Windows
+   #### Windows
       ```bash
-      python -m venv venv
-      venv\Scripts\activate
+            python -m venv venv
+            venv\Scripts\activate
 
-   ### Linux / macOS
+   #### Linux / macOS
       ```bash
       python3 -m venv venv
       source venv/bin/activate
