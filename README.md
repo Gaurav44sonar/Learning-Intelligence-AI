@@ -125,17 +125,46 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
       cd Learning-Intelligence-AI
       
    2. Create and Activate a Virtual Environment
-   #### Windows
+      Windows
       ```bash
             python -m venv venv
             venv\Scripts\activate
 
-   #### Linux / macOS
+   3. Install Required Dependencies
       ```bash
-      python3 -m venv venv
-      source venv/bin/activate
+         pip install -r requirements.txt
+   
+   4. Configure Environment Variables (Gemini API)
+      Add the following line to your `.env` file:
 
-   4. 
+      `GEMINI_API_KEY=your_gemini_api_key_here`
+      Make sure .env is added to .gitignore.
+   
+   5. Run the FastAPI Server
+      ```bash
+         uvicorn app.main:app --reload
+   If the server starts successfully, you should see output similar to:
+
+   `Uvicorn running on http://127.0.0.1:8000`
+
+   6. Use the API
+
+      Open your browser and go to:
+         `http://127.0.0.1:8000/docs`
+
+      Use the /upload-csv endpoint to upload a learner data CSV file.
+
+      ### The API will return:
+
+      Student completion predictions
+
+      High-risk student identification
+
+      Chapter difficulty analysis
+
+      Structured insights
+
+      Optional human-readable summary
 
 
 
