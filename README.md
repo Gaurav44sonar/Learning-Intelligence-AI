@@ -157,7 +157,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
          uvicorn app.main:app --reload
    If the server starts successfully, you should see output similar to:
 
-   `Uvicorn running on http://127.0.0.1:8000`
+       `Uvicorn running on http://127.0.0.1:8000`
 
    6. Use the API
 
@@ -243,6 +243,7 @@ This approach avoids unnecessary machine learning and keeps the logic interpreta
 
         "summary": "25 out of 50 students are identified as high-risk. Chapters 1 and 2 show medium difficulty with higher dropout rates, while Chapter 3 shows low difficulty and better engagement."
       }
+```
 
    
 
